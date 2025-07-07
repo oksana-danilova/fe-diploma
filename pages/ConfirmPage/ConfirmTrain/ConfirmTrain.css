@@ -1,0 +1,283 @@
+.order-train {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid transparent;
+  background-color: var(--color-white);
+  box-shadow: 0px 2px 2px #0000004d;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.order-train:hover, 
+.order-train:active, 
+.order-train:focus, 
+.order-train:focus-visible {
+  border-color: var(--color-orange);
+}
+
+.train__name-wrapper {
+  max-width: 200px;
+  width: 100%;
+  height: 358px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 20px;
+  background-color: #E4E0E9;
+}
+
+.train__name-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  outline: 2px solid var(--color-white);
+  outline-offset: 15px;
+  color: var(--color-white);
+}
+
+.train__name-number {
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.train__name-place {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.train__name-city:not(:last-child)::after {
+  content: '\27F6';
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.train__name-city:nth-last-child(3) {
+  color: var(--color-grey);
+}
+
+.train__time-wrapper {
+  max-width: 480px;
+  width: 100%;
+  height: 358px;
+  padding: 50px 20px;
+  border-right: 1px dashed var(--color-grey);
+}
+
+.train__time-to, 
+.train__time-from {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  text-transform: capitalize;
+}
+
+.train__time-to div:first-child, 
+.train__time-to div:last-child, 
+.train__time-from div:first-child, 
+.train__time-from div:last-child {
+  flex: 1;
+}
+
+.train__time-from {
+  margin-top: 60px;
+}
+
+.train__time-to time, 
+.train__time-from time {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.train__time-to time ~ p:first-of-type, 
+.train__time-from time ~ p:first-of-type {
+  font-size: 18px;
+}
+
+.train__time-to time ~ p:last-of-type, 
+.train__time-from time ~ p:last-of-type {
+  font-size: 16px;
+  color: var(--color-grey);
+}
+
+.train__time-arrow {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.train__time-arrow.arrow-right {
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='20' viewBox='0 0 30 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.3627 20C19.3627 17.8073 19.3627 15.3821 19.3627 12.8239C12.8621 12.8239 6.46582 12.8239 0 12.8239C0 11.0299 0 9.36877 0 7.57475C6.32677 7.57475 12.7231 7.57475 19.3279 7.57475C19.3279 4.91694 19.3279 2.42525 19.3279 0C22.9432 3.3887 26.5238 6.77741 30 10.0664C26.5585 13.2558 22.9432 16.6445 19.3627 20Z' fill='%23FFA800' fill-opacity='0.79'/%3E%3C/svg%3E%0A");
+}
+
+.train__time-arrow.arrow-left {
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='20' viewBox='0 0 30 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6373 20C10.6373 17.8073 10.6373 15.3821 10.6373 12.8239C17.1379 12.8239 23.5342 12.8239 30 12.8239C30 11.0299 30 9.36877 30 7.57475C23.6732 7.57475 17.2769 7.57475 10.6721 7.57475C10.6721 4.91694 10.6721 2.42525 10.6721 0C7.05678 3.3887 3.47625 6.77741 1.90735e-06 10.0664C3.44148 13.2558 7.05678 16.6445 10.6373 20Z' fill='%23FFA800' fill-opacity='0.79'/%3E%3C/svg%3E%0A");
+}
+
+.train__price-wrapper {
+  max-width: 280px;
+  width: 100%;
+  height: 358px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px 20px;
+}
+
+.train__price-seats {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.train__price-seat {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+
+.train__price-seat-type {
+  width: 80px;
+}
+
+.train__price-seat-type, 
+.train__price-seat-up-type, 
+.train__price-seat-down-type {
+  font-size: 16px;
+}
+
+.train__price-seat-count, 
+.train__price-seat-up-count, 
+.train__price-seat-down-count {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-orange);
+}
+
+.train__price-seat-up-count, 
+.train__price-seat-down-count {
+  flex: 1;
+  text-align: center;
+}
+
+.train__price-seat-count {
+  cursor: pointer;
+}
+
+.train__price-seat-up-down {
+  position: absolute;
+  display: none;
+  width: 110%;
+  top: 40px;
+  left: -5%;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #F5F4F6;
+  box-shadow: 0px 4px 4px #00000040;
+  z-index: 1;
+}
+
+.train__price-seat-up-down-open {
+  display: block;
+}
+
+.train__price-seat-up-down:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 10px);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #F5F4F6;
+  border-left: 10px solid transparent;
+}
+
+.train__price-seat-up, 
+.train__price-seat-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.train__price-seat p:last-child, 
+.train__price-seat-up-currency, 
+.train__price-seat-down-currency {
+  color: var(--color-grey);
+}
+
+.train__price-seat-sum, 
+.train__price-seat-up-sum, 
+.train__price-seat-down-sum {
+  margin: 0 5px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.train__price-seat-currency, 
+.train__price-seat-up-currency, 
+.train__price-seat-down-currency {
+  font-size: 24px;
+}
+
+.train__price-icons {
+  width: fit-content;
+  margin: 15px 0 10px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: #C4C4C4;
+}
+
+.train__price-icons .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.train__price-button {
+  width: fit-content;
+  margin-left: auto;
+  padding: 5px 20px;
+  border: 1px solid var(--color-orange);
+  border-radius: 5px;
+  background-color: var(--color-orange);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-white);
+  white-space: nowrap;
+  transition: box-shadow, color, background-color 0.5s ease-in-out;
+}
+
+.train__price-button:hover, 
+.train__price-button:focus, 
+.train__price-button:focus-visible {
+  box-shadow: 0px 2px 2px #0000004d;
+}
+
+.train__price-button:active {
+  color: var(--color-orange);
+  background-color: transparent;
+}

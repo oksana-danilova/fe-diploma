@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.order-results__control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 45px;
+  font-size: 18px;
+  color: var(--color-grey);
+}
+
+.result-control__find-value {
+  color: var(--color-black);
+}
+
+.result-control__sort {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.result-control__select {
+  position: relative;
+  min-width: 140px;
+}
+
+.result-control__select-btn {
+  margin-left: 10px;
+  color: var(--color-black);
+  transform: translateY(3px);
+}
+
+.result-control__options {
+  position: absolute;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: inherit;
+  color: var(--color-black);
+  background-color: #E5E5E5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: translateY(-27px);
+}
+
+.result-control__options-visible {
+  visibility: visible;
+}
+
+.result-control__option {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.result-control__option:hover,
+.result-control__option:focus,
+.result-control__option:focus-visible {
+  color: var(--color-white);
+  background-color: var(--color-orange);
+}
+
+.result-control__view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.result-control__view-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.view-button {
+  outline: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.view-button_active {
+  color: var(--color-black);
+}

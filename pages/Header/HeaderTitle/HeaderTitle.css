@@ -1,0 +1,16 @@
+.header-title-wrapper {
+  flex: 1;
+}
+
+.header-title {
+  width: min-content;
+  margin: auto;
+  text-align: left;
+  font-size: 72px;
+  font-weight: 100;
+  color: var(--color-white);
+}
+
+.header-title_mod {
+  font-weight: 700;
+}

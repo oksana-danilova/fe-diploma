@@ -1,0 +1,89 @@
+.order-last-tickets {
+  width: 100%;
+  background-color: transparent;
+}
+
+.last-tickets__title {
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.last-tickets__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.last-tickets__item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  border: 1px solid #C4C4C4;
+  background: var(--color-white);
+  box-shadow: 0px 2px 2px rgba(62, 60, 65, 0.25);
+}
+
+.ticket-item__city,
+.ticket-item__railway {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.ticket-item__railway {
+  gap: 150px;
+  margin-bottom: 30px;
+}
+
+.ticket-item__from_city,
+.ticket-item__to_city {
+  font-size: 20px;
+}
+
+.ticket-item__from_railway,
+.ticket-item__to_railway {
+  font-size: 16px;
+  color: var(--color-grey);
+}
+
+.ticket-item__to_city,
+.ticket-item__to_railway {
+  text-align: right;
+}
+
+.ticket-item__options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.ticket-item__option {
+  width: 20px;
+  height: 20px;
+  color: #E5E5E5;
+}
+
+.ticket-item__cost {
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-grey);
+  text-align: end;
+}
+
+.ticket-item__cost-value {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--color-orange);
+}
+
+.ticket-item__cost-currency {
+  font-size: 30px;
+  color: var(--color-grey);
+}

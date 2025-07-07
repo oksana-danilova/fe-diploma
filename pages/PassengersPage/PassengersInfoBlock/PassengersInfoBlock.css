@@ -1,0 +1,295 @@
+:root {
+    --color-white: white;
+    --color-black: black;
+    --color-grey: #C4C4C4;
+    --color-orange: #FFA800;
+}
+
+.passengers-info-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid var(--color-grey);
+    background-color: var(--color-white);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.info-block__control {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: #F9F9F9;
+}
+
+.info-block__control-btn + label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0 20px 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.info-block__container {
+    padding: 40px 0 0 0;
+    background-color: var(--color-white);
+    border-top: 1px dashed var(--color-grey);
+}
+
+.info-block__select {
+    position: relative;
+    max-width: 280px;
+    width: 100%;
+    padding: 0 30px 0 35px;
+}
+
+.info-block__select-btn {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color-black);
+    font-size: 24px;
+    text-align: start;
+    text-transform: capitalize;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='5' viewBox='0 0 12 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.26087 5L0 0H12L6.26087 5Z' fill='%23928F94'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 95% 60%;
+}
+
+.info-block__select-options {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+    color: var(--color-black);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #F4F3F6;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px);
+}
+
+.info-block__select-options-visible {
+    visibility: visible;
+}
+
+.info-block__select-option {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    text-transform: capitalize;
+    transition: color, background-color 0.3s ease-in-out;
+}
+
+.info-block__select-option:hover,
+.info-block__select-option:focus,
+.info-block__select-option:focus-visible {
+    color: var(--color-white);
+    background-color: var(--color-orange);
+}
+
+.info-block__select-option:first-child:hover,
+.info-block__select-option:first-child:focus,
+.info-block__select-option:first-child:focus-visible {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.info-block__select-option:last-child:hover,
+.info-block__select-option:last-child:focus,
+.info-block__select-option:last-child:focus-visible {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.info-block__personal-container {
+    margin-top: 40px;
+    padding: 0 30px 0 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-block__personal-info label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--color-grey);
+}
+
+.info-block__personal-info input {
+    max-width: 280px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color-black);
+    font-size: 24px;
+    text-align: start;
+    text-transform: capitalize;
+    cursor: text;
+}
+
+.personal-gender {
+    max-width: 200px;
+    width: 100%;
+}
+
+.personal-gender__legend {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--color-grey);
+}
+
+.personal-gender__radio-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.personal-gender__radio-label {
+    flex-basis: 50%;
+    display: block;
+    height: 50px;
+    cursor: pointer;
+}
+
+.personal-gender__radio-input {
+    position: absolute;
+    width: 0;
+}
+
+.personal-gender__radio-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid var(--color-grey);
+    color: var(--color-black);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.personal-gender__radio-input:checked + .personal-gender__radio-text {
+    background: var(--color-orange);
+}
+
+.personal-gender__radio-label:first-child .personal-gender__radio-text {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+
+.personal-gender__radio-label:last-child .personal-gender__radio-text {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.personal-birth {
+    width: 100%;
+    margin-right: auto;
+    margin-left: 35px;
+}
+
+.personal-birth__label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--color-grey);
+}
+
+.personal-birth__input {
+    position: relative;
+    display: block;
+    max-width: 240px;
+    width: 100%;
+    height: 50px;
+    padding-inline: 20px;
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    font-size: 18px;
+    color: var(--color-black);
+    text-transform: uppercase;
+    background: transparent;
+    cursor: default;
+}
+
+.personal-birth__input::-webkit-datetime-edit {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.personal-birth__input::-webkit-calendar-picker-indicator {
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.1494 5.7119H49.3408V5.3877C49.3408 3.0444 47.4345 1.1382 45.0918 1.1382C42.751 1.1382 40.8457 3.0445 40.8457 5.3877V5.7119H22.4941V5.2461C22.4941 2.9048 20.5889 1 18.248 1C15.9052 1 13.999 2.9048 13.999 5.2461V5.7119H10.8535C6.3789 5.7119 2.7392 9.5752 2.7392 14.3242V54.3877C2.7392 59.1367 6.3788 63 10.8535 63H53.1494C57.6221 63 61.2607 59.1367 61.2607 54.3877V14.3242C61.2607 9.5752 57.6221 5.7119 53.1494 5.7119ZM42.8457 5.3877C42.8457 4.1475 43.8535 3.1382 45.0918 3.1382C46.332 3.1382 47.3408 4.1475 47.3408 5.3877V8.4473C47.3408 9.6875 46.332 10.6968 45.0918 10.6968C43.8535 10.6968 42.8457 9.6875 42.8457 8.4473V5.3877ZM15.999 5.2461C15.999 4.0078 17.0078 3 18.248 3C19.4863 3 20.4941 4.0078 20.4941 5.2461V8.3091C20.4941 9.5474 19.4863 10.5552 18.248 10.5552C17.0078 10.5552 15.999 9.5474 15.999 8.3091V5.2461ZM59.2607 54.3877C59.2607 58.0337 56.5195 61 53.1494 61H10.8535C7.4824 61 4.7392 58.0337 4.7392 54.3877V17.8652H59.2607V54.3877ZM59.2607 15.8652H4.7393V14.3242C4.7393 10.6782 7.4825 7.7119 10.8536 7.7119H13.9991V8.3091C13.9991 10.6504 15.9054 12.5552 18.2481 12.5552C20.5889 12.5552 22.4942 10.6504 22.4942 8.3091V7.7119H40.8458V8.4473C40.8458 10.7906 42.7511 12.6968 45.0919 12.6968C47.4347 12.6968 49.3409 10.7905 49.3409 8.4473V7.7119H53.1495C56.5196 7.7119 59.2608 10.6782 59.2608 14.3242L59.2607 15.8652Z' fill='%23928F94'/%3E%3Cpath d='M11.4316 56.0688H21.7158H52.5683C53.121 56.0688 53.5683 55.621 53.5683 55.0688V24.2148C53.5683 23.6626 53.121 23.2148 52.5683 23.2148H11.4316C10.8789 23.2148 10.4316 23.6626 10.4316 24.2148V55.0688C10.4316 55.6211 10.8789 56.0688 11.4316 56.0688ZM51.5684 43.7842H43.2842V35.4995H51.5684V43.7842ZM41.2842 43.7842H33V35.4995H41.2842V43.7842ZM31 43.7842H22.7158V35.4995H31V43.7842ZM20.7158 43.7842H12.4316V35.4995H20.7158V43.7842ZM12.4316 45.7842H20.7158V54.0689H12.4316V45.7842ZM22.7158 45.7842H31V54.0689H22.7158V45.7842ZM33 45.7842H41.2842V54.0689H33V45.7842ZM51.5684 54.0688H43.2842V45.7841H51.5684V54.0688ZM51.5684 33.4995H43.2842V25.2148H51.5684V33.4995ZM41.2842 33.4995H33V25.2148H41.2842V33.4995ZM31 33.4995H22.7158V25.2148H31V33.4995ZM12.4316 25.2148H20.7158V33.4995H12.4316V25.2148Z' fill='%23928F94'/%3E%3C/svg%3E%0A");
+}
+
+.info-block__delete-btn {
+    width: fit-content;
+    margin: 20px 40px 20px auto;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.7333 0.4L8 6.13333L2.26667 0.4C1.73333 -0.133333 0.933333 -0.133333 0.4 0.4C-0.133333 0.933333 -0.133333 1.73333 0.4 2.26667L6.13333 8L0.4 13.7333C-0.133333 14.2667 -0.133333 15.0667 0.4 15.4667L0.533333 15.6C1.06667 16.1333 1.86667 16.1333 2.26667 15.6L8 9.86667L13.6 15.4667C14.1333 16 14.9333 16 15.4667 15.4667C16 14.9333 16 14.1333 15.4667 13.6L9.86667 8L15.6 2.26667C16.1333 1.73333 16.1333 0.933333 15.6 0.533333L15.4667 0.4C14.9333 -0.133333 14.1333 -0.133333 13.7333 0.4Z' fill='%23928F94'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
+.info-block__delete-btn:hover {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.7333 0.4L8 6.13333L2.26667 0.4C1.73333 -0.133333 0.933333 -0.133333 0.4 0.4C-0.133333 0.933333 -0.133333 1.73333 0.4 2.26667L6.13333 8L0.4 13.7333C-0.133333 14.2667 -0.133333 15.0667 0.4 15.4667L0.533333 15.6C1.06667 16.1333 1.86667 16.1333 2.26667 15.6L8 9.86667L13.6 15.4667C14.1333 16 14.9333 16 15.4667 15.4667C16 14.9333 16 14.1333 15.4667 13.6L9.86667 8L15.6 2.26667C16.1333 1.73333 16.1333 0.933333 15.6 0.533333L15.4667 0.4C14.9333 -0.133333 14.1333 -0.133333 13.7333 0.4Z' fill='%23FFA800'/%3E%3C/svg%3E%0A");
+}
+
+.info-block__next-section {
+    position: relative;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    border-top: 1px dashed var(--color-grey);
+}
+
+.info-block__next-btn {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 30px;
+    padding: 10px 25px;
+    border: 1px solid var(--color-black);
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-black);
+    background-color: transparent;
+    text-transform: none;
+    transition: color, border-color, background-color 0.5s ease-in-out;
+}
+
+.info-block__next-btn:hover {
+    color: var(--color-orange);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.info-block__next-btn:active {
+    color: var(--color-black);
+    border-color: var(--color-orange);
+    background-color: var(--color-orange);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}

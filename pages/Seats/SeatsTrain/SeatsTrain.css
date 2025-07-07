@@ -1,0 +1,85 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-capitalized {
+  text-transform: capitalize;
+}
+
+.grey-text {
+  color: var(--color-grey);
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  outline: 2px solid var(--color-orange);
+  outline-offset: 7px;
+  color: var(--color-orange);
+}
+
+.train-info {
+  padding-right: 20px;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.city {
+  font-size: 16px;
+}
+
+.city::before {
+  content: "\27F6";
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.city:nth-last-child(3) {
+  color: var(--color-grey);
+}
+
+.direction-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-transform: capitalize;
+  padding: 20px 40px;
+  border-left: 1px solid var(--color-white);
+  border-right: 1px solid var(--color-white);
+}
+
+.time {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.station-details {
+  font-size: 16px;
+  color: var(--color-grey);
+}
+
+.duration-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 0 70px 0 35px;
+}
+
+.clock-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--color-orange);
+}
+
+.clock-text span {
+  font-size: 18px;
+}

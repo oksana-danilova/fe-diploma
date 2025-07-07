@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: white;
+  background-color: #3E3C41;
+}
+
+.order-filters {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.filter__date,
+.filter__switch,
+.filter__price,
+.filter__period {
+  width: 100%;
+  padding: 30px;
+  background-color: inherit;
+}
+
+.filter__switch > *,
+.filter__price > *,
+.filter__period > * {
+  width: 100%;
+}
+
+.filter__date {
+  padding: 45px 30px 30px;
+}
+
+.filter__switch {
+  padding: 25px 35px 25px 65px;
+}
+
+.switch__component {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.switch__image {
+  width: 25px;
+  height: 25px;
+  color: #E5E5E5;
+}
+
+.switch__title {
+  font-size: 18px;
+}
+
+.filter__price {
+  padding: 35px 35px 30px 30px;
+}
+
+.price__title {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.price__under-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.filter__period {
+  padding: 30px 35px 30px 30px;
+}
+
+.filter__period-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter__period-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.filter__period-btn {
+  display: none;
+}
+
+.filter__period-btn + label {
+  position: relative;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.filter__period-btn + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2218 4.20293L9.2218 9.18841L4.23632 9.18841C3.77255 9.18841 3.42473 9.53623 3.42473 10C3.42473 10.4638 3.77255 10.8116 4.23632 10.8116L9.2218 10.8116L9.2218 15.7971C9.2218 16.2608 9.56962 16.6087 9.97542 16.5507L10.0914 16.5507C10.5551 16.5507 10.9029 16.2029 10.845 15.7971V10.8116H15.7145C16.1783 10.8116 16.5261 10.4638 16.5261 10C16.5261 9.53623 16.1783 9.18841 15.7145 9.18841H10.845V4.20293C10.845 3.73917 10.4972 3.39134 10.0914 3.44931L9.97542 3.44931C9.51165 3.44931 9.16383 3.79714 9.2218 4.20293Z' fill='white'/%3E%3Crect x='1' y='1' width='18' height='18' rx='4' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.filter__period-btn:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='18' height='18' rx='4' stroke='%23C4C4C4' stroke-width='2'/%3E%3Cline x1='5.61523' y1='9.76929' x2='14.3845' y2='9.76929' stroke='%23C4C4C4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.filter__period-btn + label:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2218 4.20293L9.2218 9.18841L4.23632 9.18841C3.77255 9.18841 3.42473 9.53623 3.42473 10C3.42473 10.4638 3.77255 10.8116 4.23632 10.8116L9.2218 10.8116L9.2218 15.7971C9.2218 16.2608 9.56962 16.6087 9.97542 16.5507L10.0914 16.5507C10.5551 16.5507 10.9029 16.2029 10.845 15.7971V10.8116H15.7145C16.1783 10.8116 16.5261 10.4638 16.5261 10C16.5261 9.53623 16.1783 9.18841 15.7145 9.18841H10.845V4.20293C10.845 3.73917 10.4972 3.39134 10.0914 3.44931L9.97542 3.44931C9.51165 3.44931 9.16383 3.79714 9.2218 4.20293Z' fill='%23FCDC9D'/%3E%3Crect x='1' y='1' width='18' height='18' rx='4' stroke='%23FCDC9D' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+.filter__period-content {
+  margin-top: 20px;
+}
+
+.filter__period-subtitle {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.departure-subtitle-right,
+.arrival-subtitle-right {
+  margin-top: 45px;
+  text-align: right;
+}

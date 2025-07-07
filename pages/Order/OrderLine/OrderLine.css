@@ -1,0 +1,44 @@
+.order-line {
+  width: 100%;
+  background: linear-gradient(to right, var(--color-orange) 50%, #3E3C41 50%);
+}
+
+.order-line-all {
+  background: var(--color-orange);
+}
+
+.line__container {
+  max-width: 1490px;
+  margin: 0 auto;
+}
+
+.line__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #3E3C41;
+  background-repeat: no-repeat;
+  background-size: 1920px 92px;
+  background-position: center;
+}
+
+.line__item {
+  flex: 1;
+  padding: 20px;
+}
+
+.line__title {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.line__num {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 30px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  text-align: center;
+}

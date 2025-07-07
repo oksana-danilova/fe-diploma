@@ -1,0 +1,47 @@
+.seats__wagon-types {
+  border-top: 1px dashed var(--color-grey);
+  padding-bottom: 30px;
+}
+
+.wagon-types__title {
+  margin: 25px auto 30px 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.wagon-types__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 0 30px;
+}
+
+.wagon-types__item {
+  flex: 1;
+  font-size: 24px;
+  color: var(--color-grey);
+  transition: color 0.3s ease-in-out;
+}
+
+.wagon-type__icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.wagon-type__text {
+  margin-top: 20px;
+}
+
+.wagon-types__item-active,
+.wagon-types__item:not(:disabled):hover,
+.wagon-types__item:not(:disabled):active,
+.wagon-types__item:not(:disabled):focus-visible {
+  color: var(--color-orange);
+}
+
+.wagon-types__item:disabled {
+  color: #d9d9d9;
+  cursor: not-allowed;
+}

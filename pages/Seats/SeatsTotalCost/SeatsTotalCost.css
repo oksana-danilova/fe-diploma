@@ -1,0 +1,28 @@
+.total-seats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  color: var(--color-grey);
+}
+
+.total-seats__count {
+  color: var(--color-orange);
+  font-weight: bold;
+}
+
+.info-message {
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: #fcf8a0;
+}
+
+.error-message {
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: #ff3d0061;
+}

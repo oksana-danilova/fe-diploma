@@ -1,0 +1,139 @@
+.seats__scheme {
+  width: 100%;
+  padding: 70px 20px 25px;
+}
+
+.scheme__wagon-number {
+  width: fit-content;
+  margin-left: 44px;
+  padding: 2px 6px;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.scheme__container {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.scheme__seats-wrapper {
+  flex-grow: 1;
+}
+
+.scheme__seats-container {
+  display: flex;
+  flex-direction: column;
+  margin-block: 3px;
+  height: 123px;
+}
+
+.scheme__seats-fourth-class_right-side {
+  border-top: 4px solid #999;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 4px;
+}
+
+.scheme__seats-fourth-class_left-side {
+  border-bottom: 4px solid #999;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 4px;
+}
+
+.scheme__seats-row {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.scheme__seats-row_fourth-class {
+  gap: 3px;
+}
+
+.scheme__seats-item-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.scheme__seats-item {
+  align-items: center;
+  background: #F2F2F2;
+  border: 2px solid #F2F2F2;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 1;
+  user-select: none;
+}
+
+.scheme__seats-item:disabled {
+  border-color: #CCC;
+  background: #CCC;
+  color: white;
+  cursor: not-allowed;
+}
+
+.scheme__seats-item.selected:not(:disabled) {
+  border-color: var(--color-orange);
+}
+
+.scheme__seats-item_fourth-class {
+  height: 18px;
+  width: 26px;
+}
+
+.scheme__seats-first-class,
+.scheme__seats-second-class,
+.scheme__seats-third-class {
+  gap: 24px 0;
+}
+
+.scheme__seats-left-side {
+  border-bottom: 4px solid #999;
+  min-height: 28px;
+}
+
+.scheme__seats-placement {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scheme__seats-placement:not(:last-child) {
+  border-right: 4px solid #999;
+}
+
+.scheme__seats-row_empty:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  height: 1px;
+  background: #D5D5D5;
+}
+
+.scheme__seats-row_first-class,
+.scheme__seats-row_second-class {
+  border-bottom: 4px solid #999;
+}
+
+.scheme__seats-item_first-class,
+.scheme__seats-item_second-class,
+.scheme__seats-item_third-class {
+  flex-basis: auto;
+  width: 26px;
+}

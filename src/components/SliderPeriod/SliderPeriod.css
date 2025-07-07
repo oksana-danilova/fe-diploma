@@ -1,0 +1,22 @@
+.filter__period .ant-slider-horizontal, 
+.filter__period .ant-slider-horizontal .ant-slider-rail, 
+.filter__period .ant-slider-horizontal .ant-slider-track {
+  height: 10px;
+}
+
+.filter__period .ant-slider .ant-slider-handle, 
+.filter__period .ant-slider .ant-slider-handle::after, 
+.filter__period .ant-slider .ant-slider-handle:hover::after, 
+.filter__period .ant-slider .ant-slider-handle:active::after, 
+.filter__period .ant-slider .ant-slider-handle:focus::after {
+  width: 18px;
+  height: 18px;
+}
+
+.filter__period .ant-slider .ant-slider-mark-text:last-of-type {
+  margin-right: -17px;
+}
+
+.filter__period .ant-slider .ant-slider-mark-text {
+  margin-left: -3px;
+}

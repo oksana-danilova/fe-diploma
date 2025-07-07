@@ -1,0 +1,41 @@
+.seats-title {
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.seats-button {
+  display: inline-block;
+  margin-left: auto;
+  margin-top: 5rem;
+  padding: 0.9375rem 4.375rem;
+  border: 2px solid var(--color-orange);
+  border-radius: 5px;
+  background-color: var(--color-orange);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-white);
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.seats-button:disabled {
+  border-color: var(--color-grey);
+  background-color: var(--color-grey);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.seats-button:hover:not(:disabled),
+.seats-button:focus,
+.seats-button:focus-visible {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.seats-button:active:not(:disabled) {
+  background-color: transparent;
+  color: var(--color-orange);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}

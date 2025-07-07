@@ -1,0 +1,126 @@
+.btn-base {
+  padding: 15px 65px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.border-dashed {
+  border-right: 1px dashed var(--color-grey);
+}
+
+.confirm-info__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.confirm-info__block {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1px solid #C4C4C4;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.confirm-info__block-title {
+  padding: 30px 0 30px 30px;
+  border-bottom: 1px solid var(--color-grey);
+  font-size: 30px;
+}
+
+.confirm-info__btn {
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+  background-color: transparent;
+  padding: 15px 65px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.confirm-info__btn:hover {
+  color: var(--color-orange);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-info__btn:active {
+  color: var(--color-black);
+  border-color: var(--color-orange);
+  background-color: var(--color-orange);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-info__passengers-container {
+  display: flex;
+}
+
+.confirm-info__passengers-wrapper {
+  flex: 1;
+}
+
+.confirm-info__passenger {
+  padding: 30px 90px 30px 30px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.confirm-info__passenger-logo svg {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  fill: var(--color-orange);
+}
+
+.confirm-info__cost-wrapper {
+  align-self: flex-end;
+  padding: 0 25px 25px 25px;
+  font-size: 30px;
+  color: var(--color-black);
+}
+
+.confirm-info__payment-method {
+  flex: 1;
+  padding: 45px 0 75px 30px;
+  font-size: 24px;
+}
+
+.confirm-info__ok-btn {
+  border: 2px solid var(--color-orange);
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  padding: 15px 65px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.confirm-info__ok-btn:disabled {
+  border-color: var(--color-grey);
+  background-color: var(--color-grey);
+  cursor: not-allowed;
+}
+
+.confirm-info__ok-btn:hover:not(:disabled),
+.confirm-info__ok-btn:focus,
+.confirm-info__ok-btn:focus-visible {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.confirm-info__ok-btn:active:not(:disabled) {
+  background-color: transparent;
+  color: var(--color-orange);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.confirm-info__passengers-wrapper,
+.confirm-info__payment-method {
+  border-right: 1px dashed var(--color-grey);
+}

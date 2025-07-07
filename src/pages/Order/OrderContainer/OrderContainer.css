@@ -1,0 +1,35 @@
+.order-container {
+  background-color: #E5E5E5;
+}
+
+.order-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 95px 0 190px;
+}
+
+.order-sidebar {
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 90px;
+}
+
+.order-results {
+  position: relative;
+  width: 100%;
+}
+
+.order-results__wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+}

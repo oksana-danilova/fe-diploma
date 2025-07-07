@@ -1,0 +1,40 @@
+.seats__wagon-details-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px;
+  background-color: rgba(255, 170, 0, 0.5);
+}
+
+.seats__wagon-details-header p {
+  font-size: 16px;
+}
+
+.seats__wagon-details-header p:last-child {
+  margin-left: auto;
+}
+
+.wagon-details__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.wagon-details__list button:first-child {
+  color: var(--color-white);
+}
+
+.wagon-details__item {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.wagon-details__item.active,
+.wagon-details__item:hover,
+.wagon-details__item:active,
+.wagon-details__item:focus-visible {
+  color: var(--color-white);
+}

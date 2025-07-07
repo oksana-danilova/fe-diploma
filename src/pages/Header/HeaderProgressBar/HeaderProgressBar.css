@@ -1,0 +1,42 @@
+.header-progress {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: #292929;
+}
+
+.progress-bar {
+  position: absolute;
+  display: block;
+  width: 1%;
+  height: 100%;
+  border: none;
+  background-color: var(--color-orange);
+  animation: progress;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.progress-bar::-moz-progress-bar {
+  border: none;
+  background-color: var(--color-orange);
+}
+
+.progress-bar::-webkit-progress-bar {
+  border: none;
+  background-color: var(--color-orange);
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: var(--color-orange);
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,8 +1,9 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { socials } from "#utils/socials";
-import ValidationEmail from "#services/ValidationEmail";
-import Modal from "#components/Modal/Modal";
+import { socials } from "../utils/socials";
+import ValidationEmail from "../services/ValidationEmail";
+import Modal from "../components/Modal/Modal";
 import "./FooterSubscribe.css";
 
 function FooterSubscribe() {
@@ -43,10 +44,12 @@ function FooterSubscribe() {
       body: JSON.stringify({ email: value }),
     })
       .then(response => response.json())
+    /* eslint-disable-next-line no-unused-vars */
       .then(data => {
         setStatus("info");
         setModal("flex");
       })
+    /* eslint-disable-next-line no-unused-vars */
       .catch((e) => {
         setStatus("error");
         setModal("flex");

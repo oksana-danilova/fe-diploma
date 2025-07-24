@@ -1,8 +1,9 @@
+/* eslint-disable-next-line no-unused-vars */
 import React from "react";
-import Line1 from "#assets/order-step-1.png";
-import Line2 from "#assets/order-step-2.png";
-import Line3 from "#assets/order-step-3.png";
-import Line4 from "#assets/order-step-4.png";
+import Line1 from "../assets/order-step-1.png";
+import Line2 from "../assets/order-step-2.png";
+import Line3 from "../assets/order-step-3.png";
+import Line4 from "../assets/order-step-4.png";
 import "./OrderLine.css";
 
 function OrderLine() {

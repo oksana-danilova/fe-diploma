@@ -8,11 +8,11 @@
 }
 
 [data-action="prev"] {
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='...'/%3E%3Cpath d='...'/%3E%3Cpath d='...' stroke='black' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-image: url("./icons/prev.svg");
 }
 
 [data-action="next"] {
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='...'/%3E%3Cpath d='...'/%3E%3Cpath d='...' stroke='black' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  background-image: url("./icons/next.svg");
 }
 
 [data-action]:hover,

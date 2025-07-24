@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PayContext from '#context/payContext';
-import OrderContext from '#context/orderContext';
-import SVGicon from '#components/SVGicon/SVGicon';
+import PayContext from '../context/payContext';
+import OrderContext from '../context/orderContext';
+import SVGicon from '../components/SVGicon/SVGicon';
 import './FinishInfo.css';
 
 const initialStars = Array.from({ length: 5 }, (_, index) =>

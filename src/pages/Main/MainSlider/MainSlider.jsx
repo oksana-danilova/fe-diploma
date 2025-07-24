@@ -1,6 +1,7 @@
+/* eslint-disable-next-line no-unused-vars */
 import React from "react";
-import Feedback from "#components/Feedback/Feedback";
-import { feedbacks } from "#utils/feedbacks";
+import Feedback from "../components/Feedback/Feedback";
+import { feedbacks } from "../utils/feedbacks";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";

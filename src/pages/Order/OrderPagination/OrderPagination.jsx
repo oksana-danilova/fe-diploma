@@ -1,24 +1,26 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { memo, useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import AppContext from '#context/appContext';
+import AppContext from '../context/appContext';
 import ReactPaginate from 'react-paginate';
 import OrderTrain from '../OrderTrain/OrderTrain';
 import './OrderPagination.css';
 
-const Items = ({ data }) =>
-  data &&
-  data.items ? (
+function Items({ data }) {
+  return data && data.items ? (
     data.items.map((item, index) => <OrderTrain key={index} item={item} />)
   ) : (
     <>Результаты не найдены</>
   );
+}
 
 Items.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-const PaginatedItems = memo(({ itemsPerPage, routes, onChange }) => {
+function PaginatedItems({ itemsPerPage, routes, onChange }) {
   const [pageCount, setPageCount] = useState(0);
+/* eslint-disable-next-line no-unused-vars */
   const [itemOffset, setItemOffset] = useState(0);
 
   const handlePageClick = ({ selected }) => {
@@ -61,7 +63,7 @@ const PaginatedItems = memo(({ itemsPerPage, routes, onChange }) => {
       )}
     </>
   );
-});
+}
 
 PaginatedItems.propTypes = {
   itemsPerPage: PropTypes.number.isRequired,
@@ -69,7 +71,7 @@ PaginatedItems.propTypes = {
   onChange: PropTypes.func,
 };
 
-const OrderPagination = memo(({ routes, onChange }) => {
+function OrderPagination({ routes, onChange }) {
   const { appState } = useContext(AppContext);
 
   return (
@@ -81,11 +83,11 @@ const OrderPagination = memo(({ routes, onChange }) => {
       />
     </div>
   );
-});
+}
 
 OrderPagination.propTypes = {
   routes: PropTypes.object.isRequired,
   onChange: PropTypes.func,
 };
 
-export default OrderPagination;
+export default memo(OrderPagination);

@@ -1,9 +1,10 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import AppContext from "#context/appContext";
-import SelectLocation from "#components/Select/SelectLocation";
-import Calendar from "#components/Calendar/Calendar";
-import Modal from "#components/Modal/Modal";
+import AppContext from "../context/appContext";
+import SelectLocation from "../components/Select/SelectLocation";
+import Calendar from "../components/Calendar/Calendar";
+import Modal from "../components/Modal/Modal";
 import "./HeaderWidget.css";
 
 function HeaderWidget() {
@@ -18,7 +19,7 @@ function HeaderWidget() {
     if (!selectValue.from_city_name || !selectValue.to_city_name) {
       setModalOpen(true);
     } else {
-      navigate("/fe-diplom/order");
+      navigate("/fe-diploma/order");
     }
   };
 

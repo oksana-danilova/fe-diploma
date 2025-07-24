@@ -1,10 +1,11 @@
+/* eslint-disable-next-line no-unused-vars */
 import React from "react";
-import HeaderLogo from "../HeaderLogo/HeaderLogo";
-import HeaderNav from "../HeaderNav/HeaderNav";
-import HeaderTitle from "../HeaderTitle/HeaderTitle";
-import HeaderWidget from "../HeaderWidget/HeaderWidget";
-import HeaderProgressBar from "../HeaderProgressBar/HeaderProgressBar";
-import bgImage from "#assets/header-base-image.png";
+import HeaderLogo from "./HeaderLogo/HeaderLogo";
+import HeaderNav from "./HeaderNav/HeaderNav";
+import HeaderTitle from "./HeaderTitle/HeaderTitle";
+import HeaderWidget from "./HeaderWidget/HeaderWidget";
+import HeaderProgressBar from "./HeaderProgressBar/HeaderProgressBar";
+import bgImage from "./assets/header-base-image.png";
 import "./HeaderStart.css";
 
 function HeaderStart() {

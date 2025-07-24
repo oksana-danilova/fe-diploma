@@ -1,9 +1,11 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext, useState } from "react";
 import PropTypes from "prop-types";
-import AppContext from "#context/appContext";
+import AppContext from "../context/appContext";
 import "./OrderResultsControl.css";
 
 const OrderResultsControl = ({ count }) => {
+/* eslint-disable-next-line no-unused-vars */
   const { appState, setAppState } = useContext(AppContext);
   const [option, setOption] = useState({ dataValue: "date", value: "времени" });
   const [view, setView] = useState({ dataValue: "5", value: "5" });
@@ -26,10 +28,10 @@ const OrderResultsControl = ({ count }) => {
 
   return (
     <div className="order-results__control result-control">
-      <p>найдено:  <span className="result-control__find-value">{count}</span></p>
+      <p>найдено: <span className="result-control__find-value">{count}</span></p>
       
       <div className="result-control__sort">
-        <p>сортировать по:  </p>
+        <p>сортировать по: </p>
         <div className="result-control__select">
           <button
             className="result-control__select-btn"
@@ -56,7 +58,7 @@ const OrderResultsControl = ({ count }) => {
       </div>
 
       <div className="result-control__view">
-        <p>показывать по:  </p>
+        <p>показывать по: </p>
         <div className="result-control__view-wrapper">
           {[...Array.from({ length: 3 }).keys()].map((i) => (
             <button

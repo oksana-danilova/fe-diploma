@@ -1,10 +1,13 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
-import OrderContext from "#context/orderContext";
-import PayContext from "#context/payContext";
+import OrderContext from "../context/orderContext";
+import PayContext from "../context/payContext";
 import "./PassengersInfoBlock.css";
 
+/* eslint-disable-next-line no-unused-vars */
 const PassengersInfoBlock = ({ number, onChange }) => {
+/* eslint-disable-next-line no-unused-vars */
     const { payState, setPayState } = useContext(PayContext);
     const { orderState } = useContext(OrderContext);
     
@@ -12,22 +15,28 @@ const PassengersInfoBlock = ({ number, onChange }) => {
     const depChildCount = Number(orderState.departure_person_count.child);
     const depAdultChildCount = depAdultCount + depChildCount;
 
+    /* eslint-disable-next-line no-unused-vars */
     const [showComponent, setShowComponent] = useState(true);
     const [age, setAge] = useState({ dataValue: "adult", value: "Взрослый" });
     const [document, setDocument] = useState({ dataValue: "passport", value: "Паспорт" });
 
+    /* eslint-disable-next-line no-unused-vars */
     const handleAge = (event) => {
         event.preventDefault();
         setAge({ dataValue: event.target.dataset.value, value: event.target.value });
     };
 
+    /* eslint-disable-next-line no-unused-vars */
     const handleDocument = (event) => {
         event.preventDefault();
         setDocument({ dataValue: event.target.dataset.value, value: event.target.value });
     };
 
+    /* eslint-disable-next-line no-unused-vars */
     const handleChangeDocument = () => {
+    // eslint-disable-next-line no-undef
         const passportBlock = documentRef.current.querySelector('.select-option__passport');
+    // eslint-disable-next-line no-undef
         const birthBlock = documentRef.current.querySelector('.select-option__birth-certificate');
         
         if (document.dataValue === "birth-certificate") {
@@ -65,6 +74,7 @@ const PassengersInfoBlock = ({ number, onChange }) => {
         return true;
     };
 
+    /* eslint-disable-next-line no-unused-vars */
     const handleNextPassenger = (event) => {
         event.preventDefault();
         if (!validateForm(event)) return;

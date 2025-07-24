@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import OrderContext from "#context/orderContext";
-import SVGicon from "#components/SVGicon/SVGicon";
-import TooltipBlock from "#components/Tooltip/TooltipBlock";
+import OrderContext from "../context/orderContext";
+import SVGicon from "../components/SVGicon/SVGicon";
+import TooltipBlock from "../components/Tooltip/TooltipBlock";
 
 const handleChooseService = ({ target }, orderState, setOrderState, wagonType) => {
   const serviceItem = target.closest(".wagon-details__service-item");

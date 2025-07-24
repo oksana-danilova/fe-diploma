@@ -1,15 +1,16 @@
+/* eslint-disable-next-line no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import ArrivalImage from '#assets/slider-filter-period-arrival.png';
-import DepartureImage from '#assets/slider-filter-period-departure.png';
+import ArrivalImage from '../assets/slider-filter-period-arrival.png';
+import DepartureImage from '../assets/slider-filter-period-departure.png';
 import './SeatsExchange.css';
 
 const SeatsExchange = ({ data }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/fe-diplom/order');
+    navigate('/fe-diploma/order');
   };
 
   return (

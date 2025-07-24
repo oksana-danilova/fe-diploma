@@ -1,7 +1,8 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PayContext from '#context/payContext';
-import ValidationEmail from '#services/ValidationEmail';
+import PayContext from '../context/payContext';
+import ValidationEmail from '../services/ValidationEmail';
 import './PaymentInfo.css';
 
 const PaymentInfo = () => {
@@ -29,7 +30,7 @@ const PaymentInfo = () => {
 
     if (validateForm(formData)) {
       setPayState({...payState, user: {...formData}});
-      navigate('/fe-diplom/order/confirm');
+      navigate('/fe-diploma/order/confirm');
     }
   };
 

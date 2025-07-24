@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.25); /* немного прозрачнее */
+  background-color: rgba(0, 0, 0, 0.25);
   z-index: 9999;
 }
 
@@ -23,11 +23,11 @@
 }
 
 .modal-header-error {
-  background-image: url(...); /* SVG error icon */
+  background-image: url("./icons/error.svg");
 }
 
 .modal-header-info {
-  background-image: url(...); /* SVG info icon */
+  background-image: url("./icons/info.svg");
 }
 
 .modal-content {

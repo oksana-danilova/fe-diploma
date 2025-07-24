@@ -1,3 +1,4 @@
+/* eslint-disable-next-line no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -16,6 +17,12 @@ const SeatButton = ({ number, available, onSelect }) => {
       {number}
     </button>
   );
+};
+
+SeatButton.propTypes = {
+  number: PropTypes.number.isRequired,
+  available: PropTypes.bool.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 function SeatsSchemeFourthClass({ seats, onChange }) {

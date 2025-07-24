@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SeatButton = ({ number, available, onSelect }) => {
   return (
@@ -6,10 +7,17 @@ const SeatButton = ({ number, available, onSelect }) => {
       className={`scheme__seats-item scheme__seats-item_third-class ${available ? '' : 'disabled'}`}
       type="button"
       disabled={!available}
-      onClick={() => onSelect(number)}>
+      onClick={() => onSelect(number)}
+    >
       {number}
     </button>
   );
+};
+
+SeatButton.propTypes = {
+  number: PropTypes.number.isRequired,
+  available: PropTypes.bool.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 function SeatsSchemeThirdClass({ seats, onChange }) {
@@ -70,5 +78,15 @@ function SeatsSchemeThirdClass({ seats, onChange }) {
     </div>
   );
 }
+
+SeatsSchemeThirdClass.propTypes = {
+  seats: PropTypes.arrayOf(
+    PropTypes.shape({
+      index: PropTypes.number.isRequired,
+      available: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default SeatsSchemeThirdClass;

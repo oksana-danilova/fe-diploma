@@ -1,13 +1,14 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext, useState, useEffect } from "react";
-import AppContext from "#context/appContext";
-import { switchFilters } from "#utils/switchFilters";
-import SVGicon from "#components/SVGicon/SVGicon";
-import Calendar from "#components/Calendar/Calendar";
-import SidebarSwitch from "#components/Switch/SidebarSwitch";
-import SliderPrice from "#components/SliderPrice/SliderPrice";
-import SliderPeriod from "#components/SliderPeriod/SliderPeriod";
-import ArrivalImage from "#assets/slider-filter-period-arrival.png";
-import DepartureImage from "#assets/slider-filter-period-departure.png";
+import AppContext from ".//context/appContext";
+import { switchFilters } from "../utils/switchFilters";
+import SVGicon from "../components/SVGicon/SVGicon";
+import Calendar from "../components/Calendar/Calendar";
+import SidebarSwitch from "../components/Switch/SidebarSwitch";
+import SliderPrice from "../components/SliderPrice/SliderPrice";
+import SliderPeriod from "../components/SliderPeriod/SliderPeriod";
+import ArrivalImage from "../assets/slider-filter-period-arrival.png";
+import DepartureImage from "../assets/slider-filter-period-departure.png";
 import "./OrderFilters.css";
 
 function OrderFilters() {

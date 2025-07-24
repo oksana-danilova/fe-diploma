@@ -1,6 +1,7 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import OrderContext from '#context/orderContext';
+import OrderContext from '../context/orderContext';
 import PassengersInfoBlock from '../PassengersInfoBlock/PassengersInfoBlock';
 import PassengersAddInfoBlock from '../PassengersAddInfoBlock/PassengersAddInfoBlock';
 import './PassengersInfo.css';
@@ -21,6 +22,7 @@ function PassengersInfo() {
   const navigate = useNavigate();
 
   const handleIncrease = () => setPassengerCount(prevCount => prevCount + 1);
+  /* eslint-disable-next-line no-unused-vars */
   const handleDecrease = () => passengerCount > 0 && setPassengerCount(prevCount => prevCount - 1);
 
   const handleNextStep = event => {

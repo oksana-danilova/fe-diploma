@@ -1,5 +1,6 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext } from "react";
-import OrderContext from "#context/orderContext";
+import OrderContext from "../context/orderContext";
 import "./SeatsTicketAmount.css";
 
 const SeatsTicketAmount = () => {
@@ -7,23 +8,24 @@ const SeatsTicketAmount = () => {
 
   const handleInputChange = ({ target }) => {
     const { dataset: { name }, value } = target.parentElement.closest('.seats__container');
-    let newCount = {};
+    let newValue = value;
 
     switch(target.name) {
       case 'adult':
-        value = Math.min(value.replace(/[^0-5]/g, ''), 5).toString();
+        newValue = Math.min(newValue.replace(/[^0-5]/g, ''), 5).toString();
         break;
       
       case 'child':
-        value = Math.min(value.replace(/[^0-3]/g, ''), 3).toString();
+        newValue = Math.min(newValue.replace(/[^0-3]/g, ''), 3).toString();
         break;
         
       case 'baby': 
-        value = Math.min(value.replace(/[^0-5]/g, ''), parseInt(orderState[name]?.adult || 0)).toString();
+        newValue = Math.min(newValue.replace(/[^0-5]/g, ''), parseInt(orderState[name]?.adult || 0)).toString();
         break;
     }
 
-    newCount[target.name] = value;
+    let newCount = {};
+    newCount[target.name] = newValue;
 
     setOrderState(prevState => ({
       ...prevState,

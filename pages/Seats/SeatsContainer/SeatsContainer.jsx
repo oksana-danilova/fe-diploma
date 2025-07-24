@@ -1,6 +1,7 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext, useMemo, useState, useEffect } from 'react';
-import AppContext from '#context/appContext';
-import useGetSeats from '#services/useGetSeats';
+import AppContext from '../context/appContext';
+import useGetSeats from '../services/useGetSeats';
 import SeatsExchange from '../SeatsExchange/SeatsExchange';
 import SeatsTrain from '../SeatsTrain/SeatsTrain';
 import SeatsTicketAmount from '../SeatsTicketAmount/SeatsTicketAmount';
@@ -10,6 +11,7 @@ import SeatsWagonDetails from '../SeatsWagonDetails/SeatsWagonDetails';
 import SeatsTotalCost from '../SeatsTotalCost/SeatsTotalCost';
 import './SeatsContainer.css';
 
+/* eslint-disable-next-line no-unused-vars */
 const useWagonClasses = ({ departureData, arrivalData }) => {
   const [wagonClasses, setWagonClasses] = useState({});
 

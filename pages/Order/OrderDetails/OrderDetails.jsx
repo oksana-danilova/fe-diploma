@@ -1,13 +1,13 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext } from "react";
-import AppContext from "#context/appContext";
-import RouteContext from "#context/routeContext";
-import OrderContext from "#context/orderContext";
-import ArrivalImage from "#assets/slider-filter-period-arrival.png";
-import DepartureImage from "#assets/slider-filter-period-departure.png";
-import PassengersImage from "#assets/order-sidebar-passengers-icon.png";
+import AppContext from "../#context/appContext";
+import RouteContext from "../context/routeContext";
+import OrderContext from "../context/orderContext";
+import ArrivalImage from "../assets/slider-filter-period-arrival.png";
+import DepartureImage from "../assets/slider-filter-period-departure.png";
+import PassengersImage from "../assets/order-sidebar-passengers-icon.png";
 import "./OrderDetails.css";
 
-// Вспомогательная функция для подсчёта итоговой стоимости
 const calculateTotalCost = ({
   departureServiceCost,
   arrivalServiceCost,
@@ -19,27 +19,23 @@ const calculateTotalCost = ({
   return depCost + arrCost;
 };
 
-// Основной компонент
 function OrderDetails() {
   const { appState } = useContext(AppContext);
   const { routeState } = useContext(RouteContext);
   const { orderState } = useContext(OrderContext);
 
-  // Расчёт затрат на услуги
   const serviceDepCost = Object.values(orderState.departure_service)
     .reduce((acc, val) => acc + Number(val), 0);
 
   const serviceArrCost = Object.values(orderState.arrival_service)
     .reduce((acc, val) => acc + Number(val), 0);
 
-  // Расчёт стоимости билетов
   const ticketsDepCost = orderState.departure?.seats
     ?.reduce((acc, seat) => acc + Number(seat.seat_cost), 0);
 
   const ticketsArrCost = orderState.arrival?.seats
     ?.reduce((acc, seat) => acc + Number(seat.seat_cost), 0);
 
-  // Общая стоимость всех расходов
   const totalDepArrCost = calculateTotalCost({
     departureServiceCost: serviceDepCost,
     arrivalServiceCost: serviceArrCost,
@@ -47,7 +43,6 @@ function OrderDetails() {
     ticketArrCost: ticketsArrCost
   });
 
-  // Количество взрослых и детей
   const adultSeatsCount =
     Number(orderState.departure_person_count.adult) +
     Number(orderState.arrival_person_count.adult);
@@ -56,7 +51,6 @@ function OrderDetails() {
     Number(orderState.departure_person_count.child) +
     Number(orderState.arrival_person_count.child);
 
-  // Стоимость мест отдельно для взрослых и детей
   const adultSeatsCost = totalDepArrCost -
     0.425 * ((totalDepArrCost * childSeatsCount) /
                (adultSeatsCount + childSeatsCount));

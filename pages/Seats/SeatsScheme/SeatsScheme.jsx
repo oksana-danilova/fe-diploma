@@ -1,17 +1,20 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import OrderContext from '#context/orderContext';
-import WagonHeader from '#assets/wagon-header.png';
-import WagonFooter from '#assets/wagon-footer.png';
+import OrderContext from '../context/orderContext';
+import WagonHeader from '../assets/wagon-header.png';
+import WagonFooter from '../assets/wagon-footer.png';
 import SeatsSchemeFourthClass from './SeatsSchemeFourthClass/SeatsSchemeFourthClass';
 import SeatsSchemeThirdClass from './SeatsSchemeThirdClass/SeatsSchemeThirdClass';
 import SeatsSchemeSecondClass from './SeatsSchemeSecondClass/SeatsSchemeSecondClass';
 import SeatsSchemeFirstClass from './SeatsSchemeFirstClass/SeatsSchemeFirstClass';
 import './SeatsScheme.css';
 
+/* eslint-disable-next-line no-unused-vars */
 const SeatHandler = ({ value }) => {
   const { orderState, setOrderState } = useContext(OrderContext);
 
+  // eslint-disable-next-line no-undef
   const targetWagon = data.coach._id === value.coach_id ? data : null;
   let ticketPrice;
 

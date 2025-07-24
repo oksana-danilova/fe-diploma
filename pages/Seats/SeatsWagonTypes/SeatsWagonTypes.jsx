@@ -1,7 +1,8 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import RouteContext from '#context/routeContext';
-import SVGicon from '#components/SVGicon/SVGicon';
+import RouteContext from '../context/routeContext';
+import SVGicon from '../components/SVGicon/SVGicon';
 import './SeatsWagonTypes.css';
 
 const WAGON_CLASSES = [
@@ -12,6 +13,7 @@ const WAGON_CLASSES = [
 ];
 
 function SeatsWagonTypes({ data, identity, onChange }) {
+  /* eslint-disable-next-line no-unused-vars */
   const { routeState, setRouteState } = useContext(RouteContext);
   const availableClasses = new Set(data.map((obj) => obj.coach.class_type));
 

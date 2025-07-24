@@ -1,7 +1,8 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import RouteContext from '#context/routeContext';
-import SVGicon from '#components/SVGicon/SVGicon';
+import RouteContext from '../context/routeContext';
+import SVGicon from '../components/SVGicon/SVGicon';
 import './SeatsTrain.css';
 
 const extractRouteInfo = (state, type) => ({

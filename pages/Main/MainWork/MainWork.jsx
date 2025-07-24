@@ -1,8 +1,9 @@
+/* eslint-disable-next-line no-unused-vars */
 import React from "react";
 import "./MainWork.css";
-import workImage1 from "#assets/main-work-icon-1.png";
-import workImage2 from "#assets/main-work-icon-2.png";
-import workImage3 from "#assets/main-work-icon-3.png";
+import workImage1 from "../assets/main-work-icon-1.png";
+import workImage2 from "../assets/main-work-icon-2.png";
+import workImage3 from "../assets/main-work-icon-3.png";
 
 function MainWork() {
   return (

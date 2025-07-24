@@ -1,4 +1,6 @@
+/* eslint-disable-next-line no-unused-vars */
 import PropTypes from "prop-types";
+/* eslint-disable-next-line no-unused-vars */
 import React from 'react';
 import './PassengersAddInfoBlock.css';
 
@@ -19,6 +21,10 @@ const PassengersAddInfoBlock = ({ onChange }) => {
       </div>
     </div>
   );
+};
+
+PassengersAddInfoBlock.propTypes = {
+  onChange: PropTypes.func.isRequired
 };
 
 export default PassengersAddInfoBlock;

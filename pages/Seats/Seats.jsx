@@ -1,10 +1,11 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext, useState, useEffect } from 'react';
-import AppContext from '#context/appContext';
-import OrderContext from '#context/orderContext';
-import useGetSeats from '#services/useGetSeats';
+import AppContext from '../context/AppContext';
+import OrderContext from '../context/orderContext';
+import useGetSeats from '../services/useGetSeats';
 import { useNavigate } from 'react-router-dom';
 import SeatsContainer from '../Seats/SeatsContainer/SeatsContainer';
-import Modal from '#components/Modal/Modal';
+import Modal from '../components/Modal/Modal';
 import './Seats.css';
 
 const Seats = () => {
@@ -17,7 +18,7 @@ const Seats = () => {
 
   const handleClick = (event) => {
     event.preventDefault();
-    navigate('/fe-diplom/order/passengers');
+    navigate('/fe-diploma/order/passengers');
   };
 
   const isButtonDisabled = () => {

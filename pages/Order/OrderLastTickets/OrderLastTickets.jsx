@@ -1,5 +1,6 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import SVGicon from '#components/SVGicon/SVGicon';
+import SVGicon from '../components/SVGicon/SVGicon';
 import './OrderLastTickets.css';
 
 const OrderLastTickets = () => {

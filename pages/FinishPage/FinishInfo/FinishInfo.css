@@ -121,7 +121,7 @@
 .service-rating__star {
   width: 50px;
   height: 50px;
-  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 3.23607L28.4373 16.8926L28.6618 17.5836H29.3883H43.7477L32.1307 26.0238L31.5429 26.4508L31.7675 27.1418L36.2047 40.7984L24.5878 32.3582L24 31.9311L23.4122 32.3582L11.7953 40.7984L16.2325 27.1418L16.4571 26.4508L15.8693 26.0238L4.25233 17.5836H18.6117H19.3382L19.5627 16.8926L24 3.23607Z' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-image: url("./icons/star.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -130,7 +130,7 @@
 
 .service-rating__star:hover, 
 .service-rating__star.active {
-  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 3.23607L28.4373 16.8926L28.6618 17.5836H29.3883H43.7477L32.1307 26.0238L31.5429 26.4508L31.7675 27.1418L36.2047 40.7984L24.5878 32.3582L24 31.9311L23.4122 32.3582L11.7953 40.7984L16.2325 27.1418L16.4571 26.4508L15.8693 26.0238L4.25233 17.5836H18.6117H19.3382L19.5627 16.8926L24 3.23607Z' fill='%23329C00' stroke='%232B8700' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-image: url("./icons/filled-star.svg");
 }
 
 .service-rating__btn {

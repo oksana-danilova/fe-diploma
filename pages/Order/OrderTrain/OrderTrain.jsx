@@ -1,11 +1,12 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import AppContext from "#context/appContext";
-import RouteContext from "#context/routeContext";
-import OrderContext from "#context/orderContext";
+import AppContext from "../context/appContext";
+import RouteContext from "../context/routeContext";
+import OrderContext from "../context/orderContext";
 import { useNavigate } from "react-router-dom";
-import SVGicon from "#components/SVGicon/SVGicon";
-import getTime from '#services/getTime';
+import SVGicon from "../components/SVGicon/SVGicon";
+import getTime from '../services/getTime';
 import "./OrderTrain.css";
 
 const SEAT_TYPES = {
@@ -21,7 +22,6 @@ function OrderTrain({ item }) {
   const { orderState, setOrderState } = useContext(OrderContext);
   const navigate = useNavigate();
 
-  // Функция обновления контекста
   function updateContexts() {
     const newAppState = { ...appState };
     const newRouteState = { ...routeState };
@@ -76,8 +76,8 @@ function OrderTrain({ item }) {
           
           return (
             <>
-              <p className="train__name-number">{currentItem.train.name}</p>
-              <div className="train__name-place">
+              <p className="train__name-number" key={`${key}_number`}>{currentItem.train.name}</p>
+              <div className="train__name-place" key={`${key}_place`}>
                 <p className="train__name-city">{currentItem.from.city.name}</p>
                 <p className="train__name-city">{currentItem.to.city.name}</p>
               </div>
@@ -93,7 +93,7 @@ function OrderTrain({ item }) {
           if (!currentItem) return null;
           
           return (
-            <div className={`train__time-${key}`} id={currentItem._id}>
+            <div className={`train__time-${key}`} key={currentItem._id}>
               <div>
                 <time dateTime="2001-05-15 19:00">{getTime(currentItem.from.datetime)}</time>
                 <p>{currentItem.from.city.name}</p>
@@ -132,7 +132,7 @@ function OrderTrain({ item }) {
                     if (!price) return null;
                     
                     return (
-                      <div className={`train__price-seat-${priceKey}`} key={priceKey}>
+                      <div className={`train__price-seat-${priceKey}`} key={`${seatType}-${priceKey}`}>
                         <p className={`train__price-seat-${priceKey}-type`}>{priceKey === "side" ? "боковые" : `${priceKey === "top" ? "верхние" : "нижние"}`}</p>
                         <p><span className={`train__price-seat-${priceKey}-sum`}>{price}</span>₽</p>
                       </div>

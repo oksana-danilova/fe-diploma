@@ -1,9 +1,11 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { useMemo, useContext } from 'react';
 import PropTypes from 'prop-types';
-import RouteContext from '#context/routeContext';
+import RouteContext from '../context/routeContext';
 import './SeatsWagonHeader.css';
 
 const SeatsWagonHeader = ({ data, identity, wagonClass }) => {
+/* eslint-disable-next-line no-unused-vars */
   const { routeState, setRouteState } = useContext(RouteContext);
 
   const buttonsList = useMemo(() => {

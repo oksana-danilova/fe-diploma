@@ -36,6 +36,11 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
 
+    - name: Authenticate with GitHub using token
+      run: |
+        git remote set-url origin https://${{ secrets.GH_PAGES_TOKEN }}@github.com/${{ github.repository }}.git
+      shell: bash {0}
+      
     - name: Deploy
       if: github.event_name == 'push' && contains(github.ref, 'refs/heads/main')
       run: |

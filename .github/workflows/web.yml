@@ -31,6 +31,11 @@ jobs:
     - name: Build
       run: npm run build
       
+    - name: Configure Git credentials
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+
     - name: Deploy
       if: github.event_name == 'push' && contains(github.ref, 'refs/heads/main')
       run: |
